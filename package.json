@@ -1,0 +1,19 @@
+{
+  "name": "holiday-expenses-calculator",
+  "version": "1.0.0",
+  "description": "Bunk dev test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stefanhoman56/Holiday-Expenses-Calculator.git"
+  },
+  "author": "Stefan Homan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stefanhoman56/Holiday-Expenses-Calculator/issues"
+  },
+  "homepage": "https://github.com/stefanhoman56/Holiday-Expenses-Calculator#readme"
+}
