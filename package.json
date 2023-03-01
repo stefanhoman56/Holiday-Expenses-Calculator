@@ -6,7 +6,10 @@
   "scripts": {
     "install-all": "npm install --prefix api",
     "start": "npm run start --prefix api",
-    "test": "npm run test --prefix api"
+    "test": "npm run test --prefix api",
+    "tslint": "npm run tslint --prefix api",
+    "prettier:check": "npm run prettier:check --prefix api",
+    "prettier:write": "npm run prettier:write --prefix api"
   },
   "repository": {
     "type": "git",
@@ -17,11 +20,5 @@
   "bugs": {
     "url": "https://github.com/stefanhoman56/Holiday-Expenses-Calculator/issues"
   },
-  "homepage": "https://github.com/stefanhoman56/Holiday-Expenses-Calculator#readme",
-  "dependencies": {
-    "ts-node": "^10.9.1"
-  },
-  "devDependencies": {
-    "typescript": "^4.9.5"
-  }
+  "homepage": "https://github.com/stefanhoman56/Holiday-Expenses-Calculator#readme"
 }
