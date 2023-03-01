@@ -4,7 +4,8 @@
   "description": "Bunk dev test",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "install-all": "npm install --prefix api",
+    "start" : "npm run start --prefix api"
   },
   "repository": {
     "type": "git",
