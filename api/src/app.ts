@@ -1,7 +1,8 @@
 import express, { Request, Response } from 'express';
 import cors from 'cors';
 import bodyParser from 'body-parser';
-import { Expense, PayoutsCalculator } from './services/payout';
+import { Expense } from './models/payout';
+import { PayoutsCalculator } from './services/payout';
 
 const app = express();
 const port = 3000;

@@ -1,19 +1,4 @@
-interface Expense {
-  name: string;
-  amount: number;
-}
-
-interface Payout {
-  owes: string;
-  owed: string;
-  amount: number;
-}
-
-interface PayoutResult {
-  total: number;
-  equalShare: number;
-  payouts: Payout[];
-}
+import { Expense, Payout, PayoutResult } from '../models/payout';
 
 class PayoutsCalculator {
   private expenses: Expense[];
@@ -71,4 +56,4 @@ class PayoutsCalculator {
   }
 }
 
-export { Expense, PayoutsCalculator };
+export { PayoutsCalculator };
