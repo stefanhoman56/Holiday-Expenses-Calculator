@@ -5,6 +5,11 @@
         "tslint-config-prettier"
     ],
     "jsRules": {},
-    "rules": {},
+    "rules": {
+        "quotemark": [
+            true,
+            "single"
+        ]
+    },
     "rulesDirectory": []
 }
