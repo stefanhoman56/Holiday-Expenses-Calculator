@@ -28,7 +28,7 @@ or
 npm run e2e-headless
 ```
 
-### 6. Lint and Prettier
+### 5. Lint and Prettier
 ```
 npm run prettier:check
 ```
