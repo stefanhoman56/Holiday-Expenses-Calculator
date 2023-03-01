@@ -1,21 +1,21 @@
-import { Component } from "@angular/core";
-import { Expense } from "../types/Expense";
-import { HttpClient } from "@angular/common/http";
-import { PayoutsResponse } from "../types/PayoutsResponse";
+import { Component } from '@angular/core';
+import { Expense } from '../types/Expense';
+import { HttpClient } from '@angular/common/http';
+import { PayoutsResponse } from '../types/PayoutsResponse';
 
 @Component({
-  selector: "app-root",
-  templateUrl: "./app.component.html",
-  styleUrls: ["./app.component.scss"],
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  Book: string = "Book";
-  Song: string = "Song";
+  Book: string = 'Book';
+  Song: string = 'Song';
   expenses: Expense[] = [];
   songs: Expense[] = [];
-  payouts: string = "";
+  payouts: string = '';
 
-  private SettleUpUrl = "http://localhost:3000/payouts";
+  private SettleUpUrl = 'http://localhost:3000/payouts';
 
   constructor(private http: HttpClient) {}
 
@@ -30,10 +30,12 @@ export class AppComponent {
   }
 
   onSettledUp() {
-    this.http.post(this.SettleUpUrl, {
-      expenses: this.expenses,
-    }).subscribe((resp) => {
-      this.payouts = JSON.stringify(resp, null, 2);
-    });
+    this.http
+      .post(this.SettleUpUrl, {
+        expenses: this.expenses,
+      })
+      .subscribe((resp) => {
+        this.payouts = JSON.stringify(resp, null, 2);
+      });
   }
 }

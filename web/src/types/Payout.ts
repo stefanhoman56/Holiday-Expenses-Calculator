@@ -1,5 +1,5 @@
 export interface Payout {
-    owes: string;
-    owed: string;
-    amount: number;
+  owes: string;
+  owed: string;
+  amount: number;
 }

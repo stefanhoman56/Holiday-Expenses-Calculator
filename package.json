@@ -5,11 +5,13 @@
   "main": "index.js",
   "scripts": {
     "install-all": "npm install --prefix api && npm install --prefix web",
-    "start": "npm run start --prefix api && npm run start --prefix api",
+    "start": "concurrently \"npm run start --prefix api\" \"npm run start --prefix web\"",
     "test": "npm run test --prefix api",
     "tslint": "npm run tslint --prefix api",
-    "prettier:check": "npm run prettier:check --prefix api",
-    "prettier:write": "npm run prettier:write --prefix api"
+    "prettier:check": "npm run prettier:check --prefix api && npm run prettier:check --prefix web",
+    "prettier:write": "npm run prettier:write --prefix api && npm run prettier:write --prefix web",
+    "e2e": "npm run e2e --prefix web",
+    "e2e-headless": "npm run e2e-headless --prefix web"
   },
   "repository": {
     "type": "git",
@@ -20,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/stefanhoman56/Holiday-Expenses-Calculator/issues"
   },
-  "homepage": "https://github.com/stefanhoman56/Holiday-Expenses-Calculator#readme"
+  "homepage": "https://github.com/stefanhoman56/Holiday-Expenses-Calculator#readme",
+  "devDependencies": {
+    "concurrently": "^7.6.0"
+  }
 }

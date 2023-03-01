@@ -1,16 +1,10 @@
-import {
-  Component,
-  OnInit,
-  Input,
-  Output,
-  EventEmitter,
-} from "@angular/core";
-import { Expense } from "../../types/Expense";
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Expense } from '../../types/Expense';
 
 @Component({
-  selector: "data-list",
-  templateUrl: "./dataList.component.html",
-  styleUrls: ["./dataList.component.scss"],
+  selector: 'data-list',
+  templateUrl: './dataList.component.html',
+  styleUrls: ['./dataList.component.scss'],
 })
 export class DataList implements OnInit {
   @Input() dataList: Expense[] = new Array<Expense>();
