@@ -9,10 +9,12 @@ app.use(express.urlencoded({
 }))
 app.use(cors())
 
-app.get("/", (req, res) => {
-    res.send("Hello world!");
+app.get("/hello", (req, res) => {
+    res.send("Hello, World!");
 });
 
-app.listen(port, () => {
+const server = app.listen(port, () => {
     console.log(`server started at http://localhost:${port}`);
 });
+
+export {app, server};
